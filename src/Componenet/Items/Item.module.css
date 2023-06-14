@@ -1,0 +1,24 @@
+.ul{
+    border: 2px solid black;
+    /* display: flex; */
+    margin: 2rem;
+}
+.ul li {
+    display: table;
+    /* align-items: baseline; */
+}
+
+.child{
+    display: flex;
+    justify-content: space-around;
+}
+.child p{
+    margin: 0 3rem;
+    font-family: cursive;
+}
+.child span{
+    margin: 0 1rem
+}
+.price{
+    font-size: x-large;
+}
