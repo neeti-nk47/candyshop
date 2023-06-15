@@ -26,7 +26,7 @@ export const ContextProvider = (props) => {
         setCandys(data);
       }
     } catch (error) {
-      alert(error.message);
+      console.log(error.message);
     }
   };
   useEffect(() => {
@@ -55,13 +55,13 @@ export const ContextProvider = (props) => {
       const data = await response.json();
       console.log("data while post", data);
     } catch (error) {
-      alert(error.message);
+      console.log(error.message);
     }
   };
 
   useEffect(() => {
     postcandystodatabase();
-  }, [candys]);
+  });
 
   const getdataofcartItems = async () => {
     try {
@@ -77,7 +77,7 @@ export const ContextProvider = (props) => {
         setCartItems(data);
       }
     } catch (error) {
-      alert(error.message);
+      console.log(error.message);
     }
   };
   useEffect(() => {
@@ -102,18 +102,18 @@ export const ContextProvider = (props) => {
       const data = await response.json();
       console.log("data while post", data);
     } catch (error) {
-      alert(error.message);
+      console.log(error.message);
     }
   };
 
   useEffect(() => {
     postCarttodatabase();
-  }, [cartItems]);
+  });
 
   const addtocart = (item, num) => {
     console.log("in addtocart", item, num, typeof num);
     const exsitingcandyIndex = cartItems.findIndex(
-      (prevItem) => prevItem.id == item.id
+      (prevItem) => prevItem.id === item.id
     );
     const exstingcandy = cartItems[exsitingcandyIndex];
     console.log("exsistingcandy", exstingcandy);
